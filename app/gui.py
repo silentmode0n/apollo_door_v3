@@ -43,7 +43,7 @@ from .options import (
     Lock,
     Sticker,
 )
-from .component import Door
+from .door import Door
 
 
 class AQLineEdit(QLineEdit):

@@ -61,7 +61,7 @@ BACK_IMG_MAPS = {
 
 #TODO: Fill FRAMETYPE_MAPS
 FRAMETYPE_MAPS = {
-    Filling.CUSTOMER: FrameType.F20, 
+    Filling.CUSTOMER20: FrameType.F20, 
 }
 
 MODEL_MAPS = {
