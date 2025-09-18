@@ -4,10 +4,10 @@ from .components import Tube
 class ModelBase:
     def __init__(
         self,
-        width,
-        height,
-        cliarance,
-        bridge_h,
+        width: int | str,
+        height:  int | str,
+        cliarance:  int | str,
+        bridge_h:  int | str,
         frame_tube_v: Tube,
         frame_tube_h: Tube,
         door_tube_lock: Tube,
