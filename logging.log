@@ -1,0 +1,29 @@
+2025-03-11 23:41:34,708 CRITICAL Критическое исключение!
+Traceback (most recent call last):
+  File "D:\code\shift_gate\main.py", line 39, in <module>
+    app.run(condition)
+  File "D:\code\shift_gate\app\__init__.py", line 10, in run
+    self.window = MainWindow()
+                  ^^^^^^^^^^^^
+  File "D:\code\shift_gate\app\gui.py", line 245, in __init__
+    self.door_group = DoorGroup()
+                      ^^^^^^^^^^^
+  File "D:\code\shift_gate\app\gui.py", line 121, in __init__
+    self.d_bridge.currentTextChanged(self.bridge_handler)
+TypeError: native Qt signal instance 'currentTextChanged' is not callable
+2025-08-28 00:07:14,704 CRITICAL Критическое исключение!
+Traceback (most recent call last):
+  File "D:\code\shift_gate\main.py", line 39, in <module>
+    app.run(condition)
+  File "D:\code\shift_gate\app\__init__.py", line 12, in run
+    self.window.set_data(condition)
+  File "D:\code\shift_gate\app\gui.py", line 297, in set_data
+    gr.set_data(data)
+  File "D:\code\shift_gate\app\gui.py", line 97, in set_data
+    self.__dict__[k].set_text(data[k[2:]])
+  File "D:\code\shift_gate\app\gui.py", line 52, in set_text
+    self.setText(text)
+TypeError: 'PySide6.QtWidgets.QLineEdit.setText' called with wrong argument types:
+  PySide6.QtWidgets.QLineEdit.setText(int)
+Supported signatures:
+  PySide6.QtWidgets.QLineEdit.setText(str, /)

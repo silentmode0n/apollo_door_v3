@@ -1,0 +1,13 @@
+### Python ###
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[codz]
+*$py.class
+
+# Environments
+venv/
+
+# SublimeText
+*.sublime-project
+*.sublime-workspace
