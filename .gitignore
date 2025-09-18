@@ -11,3 +11,6 @@ venv/
 # SublimeText
 *.sublime-project
 *.sublime-workspace
+
+# logs
+*.log
