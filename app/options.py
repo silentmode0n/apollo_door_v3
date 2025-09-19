@@ -28,24 +28,28 @@ class FrameType(BaseOptions):
     FGR = 'GR'
 
 
-class Filling(BaseOptions): #TODO: add items in class Filling
+class Filling(BaseOptions):
     CUSTOMER20 = 'заказчика (20мм)'
     CUSTOMER2020 = 'заказчика (20+20мм)'
     CUSTOMER40 = 'заказчика (40мм)'
     CUSTOMER60 = 'заказчика (60мм)'
     CC10 = 'профлист СС10 шагрень 1ст'
+    CC10_X2 = 'Профлист 2ст'
     SANDVICH_DH = 'сэндвич S-гофр DoorHan'
     Z110 = 'жалюзи Аполло Z110'
     AG77 = 'профиль AG/77'
     PD77 = 'профиль PD/77'
     AER55S = 'профиль AER55/S'
     AER55mS = 'профиль AER55m/S'
-    CC10_CC10 = 'Профлист 2ст'
-    # 'штакетник шагрень 1ст': F20,
-    # 'штакетник шагрень 2ст': F2020,
-    # 'металлосайдинг с 2 сторон': F20,
-    # 'сетка сварная 3D': FGR,
-    # 'обрешетка из трубы 20х20': FGR,
+    TECHNO_L = 'Техно L'
+    TECHNO_M = 'Техно M'
+    GRID_3D = 'сетка сварная 3D'
+    GRID_20X20 = 'обрешетка из трубы 20х20'
+    GRID_30X30 = 'обрешетка из трубы 30х30'
+    SIDING = 'металлосайдинг с 2 сторон'
+    SIDING_KVADRO = 'металлосайдинг квадро-брус'
+    PICKET_FENCE = 'штакетник шагрень 1ст'
+    PICKET_FENCE_X2 = 'штакетник шагрень 2ст'
 
 
 class Open(BaseOptions):

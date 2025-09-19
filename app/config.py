@@ -59,9 +59,28 @@ BACK_IMG_MAPS = {
     Bridge.PANEL + Side.RIGHT: 'bridge_t_right_direct.png',
 }
 
-#TODO: Fill FRAMETYPE_MAPS
 FRAMETYPE_MAPS = {
-    Filling.CUSTOMER20: FrameType.F20, 
+    Filling.CUSTOMER20: FrameType.F20,
+    Filling.CUSTOMER2020: FrameType.F2020,
+    Filling.CUSTOMER40: FrameType.F40,
+    Filling.CUSTOMER60: FrameType.F60,
+    Filling.CC10: FrameType.F20,
+    Filling.CC10_X2: FrameType.F2020,
+    Filling.SANDVICH_DH: FrameType.F40,
+    Filling.Z110: FrameType.F60,
+    Filling.AG77: FrameType.F20,
+    Filling.PD77: FrameType.F20,
+    Filling.AER55S: FrameType.F20,
+    Filling.AER55mS: FrameType.F20,
+    Filling.TECHNO_L: FrameType.F20,
+    Filling.TECHNO_M: FrameType.F20,
+    Filling.GRID_3D: FrameType.FGR,
+    Filling.GRID_20X20: FrameType.FGR,
+    Filling.GRID_30X30: FrameType.FGR,
+    Filling.SIDING: FrameType.F20,
+    Filling.SIDING_KVADRO: FrameType.F20,
+    Filling.PICKET_FENCE: FrameType.F2020,
+    Filling.PICKET_FENCE_X2: FrameType.F2020,
 }
 
 MODEL_MAPS = {
