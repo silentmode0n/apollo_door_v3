@@ -8,11 +8,11 @@ class ModelBase:
         height:  int | str,
         cliarance:  int | str,
         bridge_h:  int | str,
-        frame_tube_v: Tube,
-        frame_tube_h: Tube,
-        door_tube_lock: Tube,
-        door_tube_hinge: Tube,
-        door_tube_h: Tube,
+        tube_frame_v: Tube,
+        tube_frame_h: Tube,
+        tube_door_lock: Tube,
+        tube_door_hinge: Tube,
+        tube_door_h: Tube,
         gap: int = 10,
         fill_gap: int = 5,
     ):
@@ -20,12 +20,12 @@ class ModelBase:
         self.width = int(width)
         self.height = int(height)
         self.cliarance = int(cliarance)
-        self.bridge_h = int(bridge_h)
-        self.frame_tube_v = frame_tube_v
-        self.frame_tube_h = frame_tube_h  # (y, x)
-        self.door_tube_lock = door_tube_lock  # (y, x)
-        self.door_tube_hinge = door_tube_hinge  # (y, x)
-        self.door_tube_h = door_tube_h
+        self.bridge_h = int(bridge_h) #FIXME: add test is_digits or replace '' on 0 in gui.py
+        self.tube_frame_v = tube_frame_v
+        self.tube_frame_h = tube_frame_h  # (y, x)
+        self.tube_door_lock = tube_door_lock  # (y, x)
+        self.tube_door_hinge = tube_door_hinge  # (y, x)
+        self.tube_door_h = tube_door_h
         self.gap = gap
         self.fill_gap = fill_gap
 
@@ -49,16 +49,16 @@ class ModelBase:
         return self.cliarance
 
     def get_door_width(self) -> int:
-        return self.width - self.frame_tube_v.a * 2 - self.gap * 2
+        return self.width - self.tube_frame_v.a * 2 - self.gap * 2
 
     def get_door_height(self) -> int:
-        return self.height - self.get_cliarance() - self.frame_tube_h.a - self.gap
+        return self.height - self.get_cliarance() - self.tube_frame_h.a - self.gap
 
     def get_door_fill_width(self) -> int:
-        return self.get_door_width() - self.door_tube_lock.a - self.door_tube_hinge.a - self.fill_gap
+        return self.get_door_width() - self.tube_door_lock.a - self.tube_door_hinge.a - self.fill_gap
 
     def get_door_fill_height(self) -> int:
-        return self.get_door_height() - self.door_tube_h.a * 2 - self.fill_gap
+        return self.get_door_height() - self.tube_door_h.a * 2 - self.fill_gap
 
     def get_bridge_fill_width(self) -> int:
         return 0
@@ -85,7 +85,7 @@ class ModelBridgeYS(ModelBase):
         super().__init__(*args, **kwargs)
 
     def get_cliarance(self):
-        return max(self.cliarance, self.frame_tube_h.a + self.gap)
+        return max(self.cliarance, self.tube_frame_h.a + self.gap)
 
 
 class ModelBridgeP(ModelBase):
@@ -96,7 +96,7 @@ class ModelBridgeP(ModelBase):
         return self.height - self.get_cliarance() - self.bridge_h - self.gap
 
     def get_bridge_fill_width(self):
-        return self.width - self.frame_tube_v.a * 2 - self.fill_gap
+        return self.width - self.tube_frame_v.a * 2 - self.fill_gap
 
     def get_bridge_fill_height(self):
-        return self.bridge_h - self.frame_tube_h.a * 2 - self.fill_gap
+        return self.bridge_h - self.tube_frame_h.a * 2 - self.fill_gap

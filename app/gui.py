@@ -50,7 +50,7 @@ class AQLineEdit(QLineEdit):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-    def set_text(self, text):
+    def set_text(self, text): 
         self.setText(text)
 
 
@@ -58,10 +58,10 @@ class AQComboBox(QComboBox):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-    def text(self):
+    def text(self): #FIXME: replace text() with get_value()
         return self.currentText()
 
-    def set_text(self, text):
+    def set_text(self, text): #FIXME: replace set_text() with set_value()
         self.setCurrentText(text)
 
 
